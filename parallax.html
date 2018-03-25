@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+	<title>
+		parallax effect
+	</title>
+	<style type="text/css">
+	body{background:url(bgg.jpg) fixed;}
+	
+	p{font-size:20px;
+		color:white;
+		}
+	p a {color:white;}	
+	
+	   #content{
+		z-index:1;
+		position:absolute;
+	     }
+	
+		
+		#layer1{
+			position:fixed;
+			z-index:-1;
+			width:500px;
+			height:500px;
+		}
+		#layer2{
+			position:fixed;
+			z-index:-2;
+			width:500px;
+			height:500px;
+			left:700px;
+		}
+	</style>
+	<script type="text/javascript">
+		
+		
+		
+		function parallax(){
+			var elem1=document.getElementById('layer1');        //why cant i define variables outside function?
+			var elem2=document.getElementById("layer2");
+			elem1.style.top=-(window.pageYOffset/10)+'px';
+			elem2.style.top=(window.pageYOffset/15)+'px';      //why not move it left or right?
+			
+		}
+		window.addEventListener('scroll',parallax);
+	</script>
+
+</head>
+<body><div id="content">
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p>parallax scrolling effect</p>
+	<p ><a href="http://www.developphp.com/video/JavaScript/Parallax-Scroll-Effects-Tutorial-Animation-Programming">SOURCE</a></p>
+</div>
+	<div> <img id="layer1" src="moon.png"></div>
+	<div><img id="layer2" src="pl.png"></div>
+</body>
+	</html>
+	
