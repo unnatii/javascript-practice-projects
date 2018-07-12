@@ -1,0 +1,37 @@
+<!Doctype html>
+<html>
+<head><title>typing text</title>
+	<style type="text/css">
+		#text{
+			height:250px;
+			width:850px;
+			background-color:#03387A;
+			margin:150px 0px 0px 200px;
+			padding:50px 0px 50px 0px;
+			text-align:center;
+			color:white;
+			font-size:100px;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="text"></div>
+	<script>
+		var str="This is an example of typing text.";
+		var ar=str.split("");var timer; 
+		function loop(){
+		                           /*creating a character array from string*/
+		if(ar.length>0){
+			document.getElementById('text').innerHTML+=ar.shift(); /*removes element from array and the return value is the removed element from array*/
+		}
+		else{
+			clearTimeOut(timer);
+			return false;             /* why return false ?*/
+		}
+		timer=setTimeout("loop()",100);
+	}
+	loop();
+	</script>
+</body>
+</html>
