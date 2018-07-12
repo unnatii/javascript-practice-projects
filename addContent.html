@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Dynamically add content
+	</title>
+	<script type='text/javascript'>
+		function yhandler(){
+			var elem=document.getElementById('content');
+			var contentHeight=elem.offsetHeight;
+			var yoffset=window.pageYOffset;
+			var x=window.innerHeight;
+			var y = yoffset +  window.innerHeight; //why use innerheight?
+			if(y >= contentHeight){
+				elem.innerHTML+= '<div id="new"> new block added</div>'; //html content within quotes
+			}
+		    var st=document.getElementById('status');
+		  			st.innerHTML=contentHeight + '|' +yoffset+ '|'+y + '|' + x;
+		}
+		window.onscroll= yhandler;
+		
+		
+		</script>
+	<style type='text/css'>
+		#status{
+			position:fixed;
+			color:orange;
+		}
+		
+		#content{
+			margin:50px;
+			 /* height =2000 ..this will fix the content height which is not desired*/
+		}
+		#new{	margin:30px;
+			width:1100px;
+			height:2000px;
+			background-color:red;
+			font-size:50px;
+			
+		}
+			</style>
+			
+</head>
+<body>
+	<div id='status'> 0 | 0 </div>
+	<div id='content'> <img width ="1170px" src='bg.jpg'></div>
+</body>
+
+</html>
