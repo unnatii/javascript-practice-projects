@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pekaboo</title>
+	<style type="text/css">
+		
+		#content{
+			height:2000px;
+	
+		}
+		#container{
+			position:fixed;
+			bottom:0px;
+			width:350px;
+			right:-600;
+			height:540px;
+			padding:0px;
+			margin:0px;
+			border:0px;
+			font-size:40px;
+			right:-300px;
+			
+		}
+		#container img {
+			width:100%;
+			bottom:0px;
+			padding:0px;
+			margin:0px;
+			border:0px;
+			
+		}
+		#girl{
+			position:absolute;
+			z-index:1;
+		}
+		#boy{
+			position:fixed;
+			height:320px; 
+			width:250px; 
+			top:380px;}
+			
+		#bar{
+			color:blue;
+			font-size:50px;
+			position:fixed;
+			padding:0 0 0 500px;
+		}
+		</style>
+		<script>
+			function yhandler(){
+				if(window.pageYOffset+window.innerHeight>=document.body.offsetHeight){
+					container.style.transition="right 0.5s ease-in-out 0.1s"
+					container.style.right="0px";
+				}
+				else{
+					container.style.transition="right 0.5s ease-in-out 0s"
+					container.style.right="-600px";
+				}
+			}
+			window.onscroll=yhandler;
+			</script>
+		
+</head>
+
+<body>
+	
+	 <div id="bar">scrolldown</div><div id="content"><img id ="boy" src="ii.png" ></div>
+	<div id="container"><img src="pk.jpg">
+		<img id="girl" src="i5.png"><div>
+	
+</body>
+</html>
