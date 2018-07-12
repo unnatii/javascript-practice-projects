@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html><head>
+	<title>Magic header</title>
+	<style type="text/css">
+		body{           /* to fill the entire width */
+		  padding: 0px;
+		  margin: 0px;
+		  text-align:center;
+		}
+		#bar1{
+			position:fixed;
+			height:250px;
+			width:100%;
+			background-color: #00306A  ;
+			padding:50px 0px 0px 0px;
+			margin:0px;
+			border:0px;
+			font-size: 53px;
+			color:white;
+		}
+		#bar2{
+			position:absolute;
+			height:70px;
+			width:100%;
+			background-color: #88BEFF    ;
+			padding:20px 0px 0px 0px;
+			margin:0px;
+			border:0px;
+			bottom:0px;  /*bottom to align it just below the upper div */
+			font-size: 23px; 
+			overflow:hidden; /*to hide the written content*/            
+		}
+		#content{
+			position:absolute;
+			background-color: white  ;
+			margin-top:300px;
+			width:100%;
+			z-index:-1;
+		
+			
+		}
+		h3{
+			margin:0px;
+			padding:0px;
+		}
+		
+	</style>
+	<script>
+		function yhandler(){
+			var bar1=document.getElementById('bar1');
+			var bar2 = document.getElementById('bar2');
+			var yp=window.pageYOffset;
+			if(yp>150){
+				bar1.style.height="70px";
+				bar2.style.height = "0px";
+			bar1.style.paddingTop="20px";
+				bar2.style.paddingTop="0px";
+					bar1.style.transition="height 0.3s linear 0s,padding 0.3s linear 0s";
+				bar2.style.transition="height 0.3s linear 0s,padding 0.3s linear 0s";
+			
+			}
+			else{
+				bar1.style.transition="height 0.5s linear 0s,padding 0.3s linear 0s";     /*necessary to include else statement to get the previous */
+				bar2.style.transition="height 0.5s linear 0s ,padding 0.3s linear 0s";         /*state back on sliding*/
+				bar1.style.paddingTop="50px";
+				bar1.style.height="250px";
+				bar2.style.height = "70px";
+				bar2.style.paddingTop="20px";
+				
+			}
+		}
+		window.addEventListener("scroll", yhandler);
+	</script>
+</head>
+<body>
+	<div id="bar1">Heading
+	<div id="bar2">SubHeading</div></div>
+	<div id="content"><script>for(var i=1;i<50;i++){
+		document.write("<h3>"+i+".     list   item</h3>");
+	}</script>
+	</div>
+</body>
+</html>
