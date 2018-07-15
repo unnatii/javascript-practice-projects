@@ -21,3 +21,6 @@ foreground content while scrolling.
  
  -**Typing text**
  >program arrays and timed loops in JavaScript to animate typing text.
+ 
+ _**SlideShow**
+ >program Array based animated slideshows using HTML, CSS and JavaScript
