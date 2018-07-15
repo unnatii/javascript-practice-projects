@@ -1,0 +1,48 @@
+<!Doctype HTML>
+<html>
+<head>
+	<title>
+		randomLetter
+	</title>
+	<style type="text/css">
+		body{
+			background-color:#FFF6E6   ;
+		}
+		#header{
+		
+			width:800px;
+			height:100px;
+			text-align:center;
+			background-color:#D1A978    ;
+			font-size:50px;
+			margin:100px 0px 0px 220px;
+			color:#7D5109  ;
+			padding:20px 0px 0px 0px;
+		}
+	#box{
+		
+		width:100px;
+		height:80px;
+		background-color:#FFD58F     ;
+		font-size:50px;
+		margin:100px 0px 0px 550px;
+		text-align:center;
+		padding:15px 0px 0px 0px;
+	}
+	
+	</style>
+	
+	
+</head>
+<body><div id="header">Returns random letter in ABCDE</div>
+	<div id='box'></div>
+	
+	<script>
+		var ar=["A","B","C","D","E"];                         /**Because when the script executes the browser has not yet parsed the <body>, 
+		                                                         so it does not know that there is an element with the specified id.**/
+		var len=ar.length;
+		var r=Math.floor(Math.random()*len);
+		document.getElementById('box').innerHTML=ar[r];
+	</script>
+</body>
+</html>
