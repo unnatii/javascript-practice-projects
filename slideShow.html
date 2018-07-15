@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head><title>slideshow</title></head>
+<style type="text/css">
+	body{
+		background-color:#F2F5F7  ;
+	}
+	#show{
+		opacity:0;
+		-webkit-transition:opacity 1s linear 0s;;
+		transition:opacity 1s linear 0s;
+		color:#C7D8EC;
+		font-size:30px;
+	}
+	#box{
+		margin:200px 0 0 150px;
+		
+		background-color:#1C3758;
+		width:900px;
+		height:120px;
+		border-radius:25px;
+		text-align:center;
+		font-size:30px;
+		color:#C7D8EC;
+		padding:60px 0px 0px 0px;
+		border:20px solid #C7D8EC   ;
+	}
+	</style>
+	<script>
+		var ar=["HTML","CSS","Javascript"];
+		var index=0;
+		var elem;
+		                                       /* why cant we assign elem outside the function*/
+		function next(){
+			elem=document.getElementById('show');
+			index++;
+			if(index==3){
+				index=0;
+			}
+			elem.style.opacity=0;
+			setTimeout('slide()',1000);              /* 1s as transition will take 1s time*/
+		}
+		function slide(){
+			elem=document.getElementById('show');
+			elem.innerHTML=ar[index];
+			elem.style.opacity=1;
+			setTimeout('next()',2000);
+		}
+		
+		window.onload= slide;
+	</script>
+<body>
+	<div id="box">Array based animated slideshow using <span id="show"></span>
+	</div>
+</body>
+</html>
