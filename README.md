@@ -24,3 +24,6 @@ foreground content while scrolling.
  
  _**SlideShow**
  >program Array based animated slideshows using HTML, CSS and JavaScript
+ 
+ -**Random Letter**
+ > we are selecting an array element randomly from given set of elements .
