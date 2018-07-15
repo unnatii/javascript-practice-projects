@@ -15,4 +15,9 @@ foreground content while scrolling.
 
 -**Add Content**
 >dynamic page content appear when user scrolls down to the bottom of the page content ,using JavaScript. 
- (used the scroll event for the window object and several DOM properties to create the functionality) 
+ 
+  -**Magic Bar**
+ >a document header that magically changes as the user scrolls down the page
+ 
+ -**Typing text**
+ >program arrays and timed loops in JavaScript to animate typing text.
